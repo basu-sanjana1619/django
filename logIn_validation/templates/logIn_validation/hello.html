@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello</title>
+
+</head>
+<body>
+{% csrf_token %} 
+<h1>Hello, </h1>
+<h2>Username entered : {{form1}}</h2>
+ <h3>Password entered : {{form2}}</h3>
+
+<!--<form action = "{% url 'hello' %}" method = "post">
+{% csrf_token %}
+{{form}}
+
+<input type = "submit" value = "SUBMIT">
+</form>-->
+</body>
+</html>
