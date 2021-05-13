@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+    <style>
+	a{
+	background-color:orange;
+	padding:20px;
+	text-decoration:none;
+	color:black;
+	font-size:20px;
+	}
+	a:hover{
+	background-color:green;
+	}
+	tr{
+	padding:20px;
+	}
+	</style>
+</head>
+<body>
+
+<a href = "{% url 'chicken_soup'%}">Chicken Soup</a>
+<a href = "{% url 'veg_soup' %}">Vegetable Soup</a>
+<br><br>
+<form action = "{% url 'add' %}" method = "post">
+{% csrf_token %}
+<h1>Add a recipe</h1>
+Name : {{form.name}}
+<br><br>
+{{form.recipe}}
+<input type = "submit" name = "SUBMIT">
+</form>
+</table>
+</body>
+</html>
